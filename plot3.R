@@ -24,6 +24,7 @@ Sys.setlocale("LC_TIME", "USA")
 
 ##as variables used in analysis are factor variables we need to use as.character and as.numeric
 ##making the plot
+png(filename= "plot3.png", width=480, height=480, units="px")
 with(data2, plot(DateTime, Sub_metering_1, type="n", xlab="daytime",xaxt="n"))
 plot(data2$DateTime, as.numeric(as.character(data2$Sub_metering_1)),type="l",
   ylab ="Energy sub metering", xlab="", xaxt="n")
@@ -34,3 +35,4 @@ axis(1, at=c(as.numeric(min(data2$DateTime)), as.numeric(min(data2$DateTime))+86
 legend('topright', c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
        lty=c(1,1,1)
        ,col=c("black","red","blue"))
+dev.off()       
