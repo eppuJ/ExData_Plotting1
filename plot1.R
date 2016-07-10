@@ -21,6 +21,8 @@ data2<-data[start:end,]
 ##setting system locale to USA to ensure correct time format
 Sys.setlocale("LC_TIME", "USA")
 ##as variables used in analysis are factor variables we need to use as.character and as.numeric
+png(filename= "plot1.png", width=480, height=480, units="px")
 hist(as.numeric(as.character(data2$Global_active_power)),
      main="Global Active Power",
      xlab="Global Active Power (kilowatts)", col="red")
+dev.off()
