@@ -1,3 +1,7 @@
+## My assignment
+This repository is made for Course Project 1 of Exploratory Data Analysis course in Coursera.
+This repository contains eight files in master branch, a readme text and Figures relating to original assignment. I have saved instructions of the course assignment below for anyone to see and added four .png files and four .R files. R-files include the code that I have used to create plots in the four PNG files.
+
 ## Introduction
 
 This assignment uses data from
