@@ -21,7 +21,9 @@ data2<-data[start:end,]
 ##setting system locale to USA to ensure correct time format
 Sys.setlocale("LC_TIME", "USA")
 ##as variables used in analysis are factor variables we need to use as.character and as.numeric
+png(filename= "plot2.png", width=480, height=480, units="px")
 plot(data2$DateTime, as.numeric(as.character(data2$Global_active_power)),
      type='l',ylab="Global Active Power (Kilowatts)", xlab="", xaxt="n")
 axis(1, at=c(as.numeric(min(data2$DateTime)), as.numeric(min(data2$DateTime))+86400
              , as.numeric(min(data2$DateTime))+2*86400), labels=c("Thu", "Fri", "Sat"))
+dev.off()             
