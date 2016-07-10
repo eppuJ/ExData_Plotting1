@@ -24,6 +24,7 @@ Sys.setlocale("LC_TIME", "USA")
 ##writing plots
 par(mfcol=c(2,2))
 ##as variables used in analysis are factor variables we need to use as.character and as.numeric
+png(filename= "plot1.png", width=480, height=480, units="px")
 plot(data2$DateTime, as.numeric(as.character(data2$Global_active_power)),type='l',ylab="Global Active Power", xlab="")
 plot(data2$DateTime, as.numeric(as.character(data2$Sub_metering_1)),type='l', xlab="",ylab ="Energy sub metering")
 lines(data2$DateTime, as.numeric(as.character(data2$Sub_metering_2)),type='l', col='red')
@@ -36,3 +37,4 @@ plot(data2$DateTime, as.numeric(as.character(data2$Voltage)),type='l',
 
 plot(data2$DateTime, as.numeric(as.character(data2$Global_reactive_power)),type='l', 
      ylab="Global_reactive_power",xlab="datetime" )
+dev.off()     
